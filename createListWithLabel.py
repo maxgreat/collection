@@ -8,6 +8,6 @@ with open(sys.argv[1], 'r') as f:
 	with open(sys.argv[2], 'w') as fout :
 		for line in f:
 			stage, idx = line.split('_')[0:2]
-		fout.write(stage+'_'+idw+'|'+line)
+			fout.write(stage+'_'+idx+'|'+line)
 		
 
