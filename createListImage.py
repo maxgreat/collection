@@ -8,7 +8,8 @@ if len(sys.argv) < 3:
 
 with open(sys.argv[2], 'w') as f:
 	for file in glob.glob(path.join(sys.argv[1], '*.jpg')):
-		line = path.basename(file).split("_")
-		f.write(line[0]+'_'+line[1]+"|"+path.basename(file)+'\n')
+		if not 'wall' in file:
+			line = path.basename(file).split("_")
+			f.write(line[0]+'_'+line[1]+"|"+path.basename(file)+'\n')
 
 
